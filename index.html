@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlyZe · Leon Schimmel</title>
+<meta name="description" content="Leon 'BlyZe' Schimmel · C# developer focused on performance, beautiful software and lightweight open-source tools built with clean architecture.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="bg-mesh" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <a href="#whoami" class="nav__brand">
+    <img src="assets/brand/logo.png" alt="" class="nav__logo" height="24">
+    <span class="nav__prompt">~</span>BlyZe<span class="cursor cursor--idle">_</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#whoami"><span class="idx">$</span>whoami</a>
+    <a href="#about"><span class="idx">$</span>about</a>
+    <a href="#projects"><span class="idx">$</span>projects</a>
+    <a href="#skills"><span class="idx">$</span>skills</a>
+    <a href="#contact"><span class="idx">$</span>contact</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="whoami">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/brand/mockup.jpg" alt="" class="hero__mockup" loading="eager">
+    </div>
+    <div class="hero__grid">
+      <p class="hero__eyebrow mono">whoami</p>
+      <h1 class="hero__title">
+        <span class="line">Leon Schimmel</span>
+        <span class="line hero__handle">known as <span class="grad-text">BlyZe</span></span>
+      </h1>
+      <p class="hero__terminal mono" id="typedLine"><span class="prompt">leon@blyze:~$</span> <span id="typedText"></span><span class="cursor" id="typedCursor">_</span></p>
+      <p class="hero__desc">German C# developer focused on performance, beautiful software and lightweight open-source tooling.</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">view projects</a>
+        <a href="#contact" class="btn btn--ghost">get in touch</a>
+      </div>
+      <div class="hero__stats mono" id="heroStats">
+        <div class="stat"><span class="stat__num">2004</span><span class="stat__label">est.</span></div>
+        <div class="stat"><span class="stat__num" data-stat="repos">—</span><span class="stat__label">repositories</span></div>
+        <div class="stat"><span class="stat__num" data-stat="stars">—</span><span class="stat__label">stars earned</span></div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-hidden="true"><span></span></a>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section__head">
+      <p class="eyebrow mono">01 · about</p>
+      <h2>A bit about me.</h2>
+    </div>
+    <div class="about__grid">
+      <div class="about__text">
+        <p>Hey, I'm Leon - also known as <b>BlyZe</b> or <b>BlyZeDev</b>.</p>
+        <p>I'm a self-taught software developer who loves building fast, clean, and well-designed software. I mainly work with modern C# and .NET, creating open-source NuGet packages, WPF desktop applications, .NET MAUI apps, and terminal tools.</p>
+        <p>I'm especially interested in performance, clean architecture, and understanding how things work under the hood. I enjoy solving unusual problems and building tools that are both practical and fun to use.</p>
+        <p>One of my favorite projects is a Game Boy emulator that runs entirely inside the Windows Command Prompt, powered by my own console rendering engine.</p>
+      </div>
+      <div class="about__side">
+        <dl class="about__facts mono">
+          <div><dt>role</dt><dd>Software Developer</dd></div>
+          <div><dt>location</dt><dd>Germany</dd></div>
+          <div><dt>age</dt><dd data-stat="age">2004</dd></div>
+          <div><dt>focus</dt><dd>Open Source</dd></div>
+          <div><dt>principles</dt><dd>Performance · Clean Code</dd></div>
+          <div><dt>status</dt><dd><span class="dot"></span>open to interesting problems</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="section__head">
+      <p class="eyebrow mono">02 · projects</p>
+      <h2>Straight off my GitHub.</h2>
+      <p class="section__sub">Pulled live from the GitHub API — pinned repos first, the rest sorted by stars. <a href="https://github.com/BlyZeDev" target="_blank" rel="noopener">See everything →</a></p>
+    </div>
+    <div class="projects__grid" id="projectsGrid">
+      <div class="project-card skeleton" aria-hidden="true"></div>
+      <div class="project-card skeleton" aria-hidden="true"></div>
+      <div class="project-card skeleton" aria-hidden="true"></div>
+    </div>
+    <p class="projects__error mono" id="projectsError" hidden>Couldn't reach the GitHub API right now — <a href="https://github.com/BlyZeDev?tab=repositories" target="_blank" rel="noopener">browse repositories directly</a>.</p>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section__head">
+      <p class="eyebrow mono">03 · skills</p>
+      <h2>What I actually use.</h2>
+    </div>
+    <div class="skills__grid">
+      <div class="skills__group">
+        <h3 class="mono">languages</h3>
+        <ul class="tag-list">
+          <li>C#</li>
+          <li>C</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="skills__group">
+        <h3 class="mono">frameworks</h3>
+        <ul class="tag-list">
+          <li>.NET</li>
+          <li>.NET MAUI</li>
+          <li>WPF</li>
+          <li>WinForms</li>
+        </ul>
+      </div>
+      <div class="skills__group">
+        <h3 class="mono">engineering focus</h3>
+        <ul class="tag-list">
+          <li>Performance optimization</li>
+          <li>Clean Code</li>
+          <li>Lightweight architecture</li>
+        </ul>
+      </div>
+      <div class="skills__group">
+        <h3 class="mono">tools</h3>
+        <ul class="tag-list">
+          <li>Git</li>
+          <li>Visual Studio</li>
+          <li>Visual Studio Code</li>
+          <li>draw.io</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--contact" id="contact">
+    <div class="section__head">
+      <p class="eyebrow mono">04 · contact</p>
+      <h2>Let's talk.</h2>
+      <p class="section__sub">Pick whatever you prefer — I check all of these.</p>
+    </div>
+    <div class="contact__grid">
+      <a class="contact-card" href="https://github.com/BlyZeDev" target="_blank" rel="noopener">
+        <span class="contact-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 16 16" width="22" height="22" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        </span>
+        <span class="contact-card__label">GitHub</span>
+        <span class="contact-card__value mono">@BlyZeDev</span>
+      </a>
+      <a class="contact-card" href="mailto:leonschimmel15@gmail.com" target="_blank" rel="noopener">
+        <span class="contact-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>
+        </span>
+        <span class="contact-card__label">Email</span>
+        <span class="contact-card__value mono">leonschimmel15@gmail.com</span>
+      </a>
+      <a class="contact-card" href="https://discord.com/users/285826293352628225" target="_blank" rel="noopener">
+        <span class="contact-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20.3 5.3A18.4 18.4 0 0 0 15.6 4c-.2.4-.5.9-.6 1.3a17 17 0 0 0-6 0A6.6 6.6 0 0 0 8.4 4a18.5 18.5 0 0 0-4.7 1.4C1 9.6.3 13.7.6 17.8a18.6 18.6 0 0 0 5.6 2.8c.5-.6.8-1.3 1.1-2a12 12 0 0 1-1.8-.9l.4-.3a13.2 13.2 0 0 0 11.4 0l.4.3c-.6.3-1.2.6-1.8.9.3.7.6 1.4 1.1 2a18.5 18.5 0 0 0 5.6-2.8c.4-4.7-.8-8.8-2.3-12.5ZM8.8 15.3c-1 0-1.8-.9-1.8-2s.8-2 1.8-2c1 0 1.8.9 1.8 2s-.8 2-1.8 2Zm6.4 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2c1 0 1.8.9 1.8 2s-.8 2-1.8 2Z"/></svg>
+        </span>
+        <span class="contact-card__label">Discord</span>
+        <span class="contact-card__value mono">blyzedev</span>
+      </a>
+      <a class="contact-card" href="https://www.paypal.com/donate/?hosted_button_id=N9S3FT7EAV982" target="_blank" rel="noopener">
+        <span class="contact-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+        </span>
+        <span class="contact-card__label">Support</span>
+        <span class="contact-card__value mono">PayPal donation</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="mono footer__brand">
+    <img src="assets/brand/logo.png" alt="" height="16">
+    © <span id="year"></span> Leon "BlyZe" Schimmel · built with HTML, CSS &amp; JS
+  </p>
+  <a href="#whoami" class="footer__top mono">back to top ↑</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
